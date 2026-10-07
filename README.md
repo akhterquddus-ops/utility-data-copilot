@@ -8,9 +8,8 @@ Built by [Muhammad Akhtar Quddus](https://github.com/akhterquddus-ops) · **Asaa
 
 > 🔒 This is a product showcase. The source code is proprietary and not published here. To arrange a demo or a pilot, see [Contact](#-contact).
 
-<!-- Add a screenshot of the main screen here:
-![Utility Data Copilot – answer, SQL and chart on one screen](screenshots/main-screen.png)
--->
+![Utility Data Copilot: billing vs collection by division, shown as a chart and a table](screenshots/main-screen.png)
+<sub>All screenshots use a synthetic "Demo Power Company" dataset. No real utility data is shown.</sub>
 
 ---
 
@@ -22,12 +21,12 @@ Utility Data Copilot answers these questions in seconds. It runs **entirely insi
 
 ### Example questions
 
-These examples are illustrative.
+- *"Show billing vs collection by division for this year"*
+- *"Top 10 feeders by energy loss last month"*
+- *"Which division has the lowest collection rate?"*
+- *"How many smart meters and how many conventional meters are installed?"*
 
-- *"Which feeders had the highest energy loss last month?"*
-- *"Show total billing versus collection by division for this year."*
-- *"How many consumers have had zero consumption for the last 3 months?"*
-- *"List the top 10 defaulters in Islamabad circle."*
+![Top 10 feeders by energy loss, answered as a chart](screenshots/energy-loss.png)
 
 ---
 
@@ -52,17 +51,23 @@ flowchart LR
 4. **A read-only database account** runs the query on SQL Server or Oracle.
 5. The answer, the SQL and a chart are shown together, so users can see exactly how the answer was produced.
 
+![The SQL that was run, with every safety check it passed](screenshots/sql-and-safety-checks.png)
+
 ---
 
 ## 📊 Results
 
-These results come from a synthetic utility test set.
+These results come from synthetic utility test sets.
 
 | Measure | Result |
 |---|---|
-| Answer accuracy, tables only (no semantic layer) | 12 / 20 |
-| Answer accuracy **with the semantic layer**, same model and database | **23 / 23**, including held-out questions |
+| Early baseline: raw tables only, no semantic layer (20-question set) | 12 / 20 |
+| **Current evaluation with the semantic layer**: consumers, meters, billing, collection and losses | **27 / 27** |
 | Attack attempts blocked by the SQL validator | **20 / 20** |
+
+The evaluation runs from the Admin console. Each question's results are compared with a reference SQL query, and every run is saved for history.
+
+![Evaluation run scoring 27 out of 27](screenshots/evaluation.png)
 
 ---
 
@@ -73,6 +78,8 @@ These results come from a synthetic utility test set.
 - **Role-based sign-in** and **session timeout**.
 - **A full audit log** of every question asked.
 - **Approved tables only.** Administrators decide which data the Copilot can see.
+
+![A request to delete data is refused](screenshots/blocked-query.png)
 
 ---
 
@@ -87,6 +94,10 @@ Non-developers can manage the whole system without writing code:
 - Evaluation
 - Users
 - Audit
+
+![Admin console: approved business views in the semantic layer](screenshots/admin-tables.png)
+
+![Admin console: utility business rules in plain English](screenshots/admin-business-rules.png)
 
 ---
 
