@@ -1,9 +1,12 @@
 # ⚡ Utility Data Copilot
 **Enterprise GenAI for electricity utilities**
 
-**Ask your utility's data questions in plain English. Your data never leaves your network.**
+Ask your utility's data questions in plain English. Your data never leaves your network.
+
 **On-premise. Read-only. Auditable. Utility-specific.**
 Your data stays inside your network.
+
+**Built by Muhammad Akhtar Quddus · AsaanDigital Applications**
 
 Utility Data Copilot is an on-premise Generative AI assistant for electricity distribution utilities. Managers ask about customers, billing, collection, energy loss or AMI meter data in their own words. On one screen they get **the answer, the SQL behind it, and a chart**.
 
@@ -123,7 +126,7 @@ Non-developers can manage the whole system without writing code:
 
 ## 🛠️ Technology
 
-`Python` · `Streamlit` · `Ollama (local LLM)` · `Microsoft SQL Server` · `Oracle` · `Natural-language-to-SQL` · `Semantic layer` · `RAG`
+Utility Semantic Layer · Natural-Language-to-SQL · Local LLM · SQL Guardrails · RAG · Python · Streamlit · SQL Server · Oracle · Ollama
 
 **Related open-source project:** [genai_sql_assistant](https://github.com/akhterquddus-ops/genai_sql_assistant) shows the core natural-language-to-SQL approach on a demo sales database.
 
