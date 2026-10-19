@@ -111,7 +111,7 @@ A synthetic power-distribution company with 5 divisions, about 4,900 consumers, 
 | | |
 |---|---|
 | ![Answer and chart](screenshots/answer-and-chart.png) | ![Trend over time](screenshots/trend-line-chart.png) |
-| ![Unsafe request refused](screenshots/unsafe-request-refused.png) | ![Admin console](screenshots/admin-console.png) |
+| ![Unsafe request refused](screenshots/unsafe-request-refused.png) | ![Admin console](screenshots/admin-console-tableviews.png) |
 
 ---
 
